@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Cover Designer</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+
+		$(document).ready(function(){
+  			//$("button").click(function(){
+  				$("#title").keyup(function(){
+  					$("#b_title").text($(this).val());
+
+  				});
+  				$("#subtitle").keyup(function(){
+  					$("#b_subtitle").text($(this).val());
+
+  				});
+  				$("#name").keyup(function(){
+  					$("#a_name").text($(this).val());
+
+  				});
+  				$("#Publisher").keyup(function(){
+  					$("#p_name").text($(this).val());
+
+  				});
+  				$("#year").keyup(function(){
+  					$("#p_year").text($(this).val());
+
+  				});
+  				$("#color").on('change',function(){
+  					$("#cover").css({"background-color": $(this).val()});
+
+  				});
+
+    			
+  			});
+		
+	</script>
+</head>
+<body>
+	<div class="kolo">
+		<div class="container">
+			<div class="row">
+				<img src="top3.jpg" style="width: 100%; height: 110px">
+				
+				<h1>COVER DESIGNER</h1>
+			</div>
+		
+		</div>
+		<div class="row">
+			<div class="col-6">
+				<form>
+					<fieldset>
+						<div class="row">
+							<div class="col-5">
+								<label><b>Book title</b></label>
+							</div>
+							<div class="col-7">
+								<input type="text" name="title" id="title">
+							</div>
+						</div>	
+						<div class="row">
+							<div class="col-5">
+								<label><b>Book subtitle</b></label>
+							</div>
+							<div class="col-7">
+								<input type="text" name="subtitle" id="subtitle">
+							</div>
+				       </div>
+				       <div class="row">
+							<div class="col-5">
+								<label><b>Author name</b></label>
+							</div>
+							<div class="col-7">
+								<input type="text" name="name" id="name"><br>
+							</div>
+				       </div>
+				       <div class="row">
+							<div class="col-5">
+								<label><b>Background color</b></label>
+							</div>
+							<div class="col-7">
+								<input type="color" value="#808080" name="color" id="color">
+							</div>
+				       </div>
+				       <div class="row">
+							<div class="col-5">
+								<label><b>Publisher</b></label>
+							</div>
+							<div class="col-7">
+								<input type="text" name="Publisher" id="Publisher">
+							</div>
+				       </div>
+				       <div class="row">
+							<div class="col-5">
+								<label><b>Publishing year</b></label>
+							</div>
+							<div class="col-7">
+								<input type="text" name="year" id="year">
+							</div>
+				       </div>
+				      <!-- <div class="row">
+				       	<button class="button_doc">
+           					Generate
+    					</button>
+				       </div>-->
+				       
+				</fieldset>
+
+				</form>
+			</div>
+			<div class="col-6" id="cover">
+				<div class="row" id="a_name">author name</div>
+				<div class="row" id="b_title">Book Title</div>
+				<div class="row" id="b_subtitle">subtitle</div>
+				
+				<div class="row" id="p_name">publisher name</div>
+				<div class="row" id="p_year">publishing year</div>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
